@@ -1,17 +1,38 @@
-/*
- * MMM_WeeklySchedule
- *
- * Ulrich Pinsdorf
- * MIT Licensed.
- *
- */
- .lessontime {
-     text-align: right;
-     white-space: nowrap;
-     padding-right: 2em;
-     width: 1ex;
- }
+/* General table styling */
+table {
+    width: 100%;
+    border-spacing: 0.5em 1em; /* Add vertical space between rows */
+}
+ 
+/* Time cell styling */
+.lessontime {
+    text-align: right;
+    white-space: nowrap;
+    padding-right: 2em;
+    width: 20%;
+    font-size: 1.5em; /* Make time larger */
+    color: #888;
+    vertical-align: top;
+}
+ 
+/* Lesson name styling */
+.lesson {
+    text-align: left;
+    font-size: 2em; /* Make lesson name significantly larger */
+    font-weight: bold;
+    color: #fff;
+    vertical-align: top;
+}
 
- .lesson{
-     text-align: left;
- }
+.module-header{
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+}
+ 
+/* Optional: make the whole module look cleaner */
+.MMM-WeeklySchedule table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+ 
