@@ -8,6 +8,21 @@
  * which will be converted to `config.js` while starting. For more information
  * see https://docs.magicmirror.builders/configuration/introduction.html#enviromnent-variables
  */
+		/* Positions
+		top_bar, 
+		top_left, 
+		top_center, 
+		top_right, 
+		upper_third, 
+		middle_center, 
+		lower_third, 
+		bottom_left, 
+		bottom_center,
+		bottom_right, 
+		bottom_bar, 
+		fullscreen_above, 
+		fullscreen_below
+		*/
 let config = {
 	address: "localhost",	// Address to listen on, can be:
 							// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
@@ -27,8 +42,8 @@ let config = {
 	httpsPrivateKey: "",	// HTTPS private key path, only require when useHttps is true
 	httpsCertificate: "",	// HTTPS Certificate path, only require when useHttps is true
 
-	language: "gr",
-	locale: "gr-GR",   // this variable is provided as a consistent location
+	language: "el",
+	locale: "el-EL",   // this variable is provided as a consistent location
 			   // it is currently only used by 3rd party modules. no MagicMirror code uses this value
 			   // as we have no usage, we  have no constraints on what this field holds
 			   // see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
@@ -67,14 +82,14 @@ let config = {
 		*/
 		{
     	module: "MMM-WeeklySchedule",
-   		position: "bottom_center",
-   		header: "School Schedule",
+   		position: "top_left",
+   		header: "Σχολεικό Πρόγραμμα",
     	config: {
         	schedule: {
-            	timeslots: [ "8:20", "9:10", "10:05", "10:55", "11:50", "12:40", "1:20" ],
+            	timeslots: [ "8:20", "9:10", "10:05", "10:55", "11:50", "12:40", "1:25" ],
             		lessons: {
-               				mon: [ "Potions", "Defense against the Dark Arts", "Lunch Break", "Transfiguration", "test5", "test6", "test7" ],  
-               				tue: [ "Astronomy", "Lunch Break", "Charms", "History of Magic", "test5", "test6", "test7" ],
+               				mon: [ "test1", "Defense against the Dark Arts", "Lunch Break", "Transfiguration", "test5", "test6", "test7" ],  
+               				tue: [ "test1", "Lunch Break", "Charms", "History of Magic", "test5", "test6", "test7" ],
                				wed: [ "Arithmancy", "Divination", "Lunch Break", "Muggle Studies", "Herbology", "test6", "test7" ],
               			    thu: [ "Care of Magical Creatures", "Care of Magical Creatures", "Lunch Break", "Transfiguration", "Charms", "test6", "test7" ],
               				fri: [ "Potions", "Herbology", "Lunch Break", "Charms", "Defense against the Dark Arts", "test6", "test7" ],
@@ -92,8 +107,8 @@ let config = {
 				weatherProvider: "openmeteo",
 				type: "current",
 				showHumidity: "temp",
-				lat: 40.755713,
-				lon: 23.077087
+				lat: 40.755713, //γεωγραφικό πλάτος(σχολείο)
+				lon: 23.077087 //γεωγραφικό μήκος(σχολείο)
 			}
 		},
 		{
@@ -101,21 +116,20 @@ let config = {
 			position: "top_right",
 			header: "Weather Forecast",
 			config: {
-				weatherProvider: "openmeteo",
+				weatherProvider: "openmeteo", //service
 				type: "forecast",
-				lat: 40.755713,
-				lon: 23.077087
+				lat: 40.755713, //γεωγραφικό πλάτος(σχολείο)
+				lon: 23.077087 //γεωγραφικό μήκος(σχολείο)
 			}
 		},
-		/*
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
 			config: {
 				feeds: [
 					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+						title: "School News",
+						url: "το rss του σχολείου θα μπει εδώ"
 					}
 				],
 				showSourceTitle: true,
@@ -124,7 +138,6 @@ let config = {
 				broadcastNewsUpdates: true
 			}
 		},
-		*/
 	]
 };
 

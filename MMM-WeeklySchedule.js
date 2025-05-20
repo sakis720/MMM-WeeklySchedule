@@ -40,7 +40,7 @@ Module.register("MMM-WeeklySchedule", {
 	getHeader: function() {
 		var header = this.data.header;
 		if(this.config.showWeekdayinHeader) {
-			header += " " + this.translate("ON_DAY") + " " + this.getDisplayDate().format("dddd"); 
+			header += " " + this.translate("ΤΗΝ") + " " + this.getDisplayDate().format("dddd"); 
 		}
 		return header;
 	},
